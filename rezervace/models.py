@@ -1,7 +1,7 @@
 from django.db import models
 
 class Rezervace(models.Model):
-    idrezervace = models.PositiveIntegerField(max_length=50, verbose_name='ID rezervace', help_text='Zadejte ID rezervace', unique=True, blank=False, null=False)
+    idrezervace = models.PositiveIntegerField(verbose_name='ID rezervace', help_text='Zadejte ID rezervace', unique=True, blank=False, null=False)
     jmenoZakaznika = models.CharField(max_length=50, verbose_name='Jméno zákazníka', help_text='Zadejte jméno zákazníka', blank=False , null=False)
     prijmeniZakaznika = models.CharField(max_length=50, verbose_name='Příjmení zákazníka',
                                       help_text='Zadejte příjmení zákazníka', blank=False, null=False)
@@ -17,7 +17,8 @@ class Rezervace(models.Model):
 class Zakaznik(models.Model):
     prijmeniZakaznika = models.CharField(max_length=50, verbose_name='Příjmení zákazníka', help_text='Zadejte příjmení zákazníka', blank=False, null=False)
     email = models.CharField(max_length=150, verbose_name='Email zákazníka', help_text='Zadejte email zákazníka', blank=False, null=False)
-    telefon = models.IntegerField(max_length=9, verbose_name='Telefonní číslo zákazníka', help_text='Zadejte telefonní číslo zákazníka', blank=False, null=False)
+    telefon = models.IntegerField(verbose_name='Telefonní číslo zákazníka', help_text='Zadejte telefonní číslo zákazníka', blank=False, null=False)
+    profilovyObrazek = models.ImageField(upload_to='uploads/', default='uploads/defaultpfp.jpg')
 
     class Meta:
         ordering = ['prijmeniZakaznika']
