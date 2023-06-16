@@ -4,10 +4,11 @@
     <div class="row">
         <div class="col-lg-8 mt-3 mb-3">
             <h2 class="bg-info text-light text-center text-uppercase p-3">{{ nadpis }}</h2>
-            <div class="row mb-3">
+
+            <div class="container">
             {% for reserve in rezervace %}
                 <div class="col-lg-6">
-                    <p>{{ reserve.idrezervace }} , {{ reserve.prijmeniZakaznika }}</p>
+                    <p>{{ reserve.idrezervace }} - {{ reserve.prijmeniZakaznika }}</p>
                 </div>
             {% endfor %}
             </div>
