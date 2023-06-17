@@ -15,3 +15,8 @@ def zakaznici(request):
         'zakaznici': Zakaznik.objects.all(),
     }
     return render(request, 'zakaznici.html', context=context)
+
+class ZakaznikDetailView(DetailView):
+    model = Zakaznik
+    template_name = 'customers/detail.html'
+    context_object_name = 'zakaznik'

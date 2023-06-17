@@ -10,7 +10,7 @@
             <img src="{{ zakaznik.profilovyObrazek.url }}"
                  alt="Fotka: {{ zakaznik.prijmeni }}"
                  class="img-fluid rounded" style="width: auto; height: 300px">
-            <p><a href="#"> {{ zakaznik.prijmeniZakaznika }}</a></p>
+            <p class="text-center"><a href="#">{{ zakaznik.jmenoZakaznika }} {{ zakaznik.prijmeniZakaznika }}</a></p>
         </div>
     {% endfor %}
     </div>
