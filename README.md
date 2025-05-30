@@ -20,10 +20,13 @@ Toto je webová aplikace postavená na frameworku Django, která slouží k spr�
    cd djangoRezervace
 
 2. **Vytvořte venv a aktivujte venv**
+```bash
 python3 -m venv .venv
 
 3. **Nainstalujte requirements**
+```bash
 pip install -r requirements.txt
 
 4. **Spusťte vývojový server:**
+```bash
 python manage.py runserver
