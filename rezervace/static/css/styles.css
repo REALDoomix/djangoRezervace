@@ -45,6 +45,10 @@ body {
   background-color: #877e7e;
 }
 
+.tabulka {
+    background: #fff;
+}
+
 footer {
   animation: 1s ease-out 0s 1 fadeIn;
   position: fixed;
